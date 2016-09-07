@@ -5,11 +5,26 @@
  */
 
 
+
+var numberToString = function (number) {
+  var str = number.toString();
+  console.log(number,' is converted to ',str);
+  return str;
+};
+numberToString(15);
+
+
 /**
  * Adds one to a given number.
  * @param {number} n
  * @return {number}
  */
+
+var increase = function (number){
+  return number +1;
+};
+increase(15);
+
 
 
 /**
@@ -17,7 +32,10 @@
  * @param {number} n
  * @return {number}
  */
-
+var decrease = function (number) {
+  return number - 1;
+};
+decrease(15);
 
 /**
  * Adds two numbers.
@@ -25,6 +43,11 @@
  * @param {number} y
  * @return {number} the sum
  */
+var add = function (x,y) {
+  return x+y;
+};
+add(10,20);
+
 
 
 /**
