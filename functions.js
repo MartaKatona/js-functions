@@ -57,6 +57,10 @@ add(10,20);
  * @return {number} the difference
  */
 
+var subtract = function (x,y) {
+  return x-y;
+};
+subtract(20,10);
 
 /**
  * Multiplies two numbers.
@@ -65,6 +69,11 @@ add(10,20);
  * @return {number} the product
  */
 
+var multiply = function (x,y) {
+  return x*y;
+};
+multiply(10,2);
+
 
 /**
  * Divides the first number by the second.
@@ -72,6 +81,10 @@ add(10,20);
  * @param {number} y
  * @return {number} the quotient
  */
+var divide = function (x,y) {
+  return x/y;
+};
+divide(10,2);
 
 
 /**
@@ -79,7 +92,10 @@ add(10,20);
  * @param {number} x, number to be squared
  * @return {number} squared
  */
-
+var square = function (x) {
+  return x*x;
+};
+square(5);
 
 /**
  * Performs a mathematical operation on two numbers.
@@ -91,13 +107,39 @@ add(10,20);
  */
 
 
+var calculate = function (operation,x,y) {
+  var result = 0;
+  if (operation === 'add') {
+    result = add(x,y);
+    console.log(x + ' + ' + y + ' = ' + result);
+  } if (operation === 'subtract') {
+    result = subtract(x,y);
+    console.log(x + ' - ' + y + ' = ' + result);
+  } if (operation === 'multiply') {
+    result = multiply(x,y);
+    console.log(x + ' * ' + y + ' = ' + result);
+  } if (operation === 'divide') {
+    result = divide(x,y);
+    console.log(x + ' / ' + y + ' = ' + result);
+  }
+  return result;
+};
+calculate('add',10,20);
+
 /**
  * Returns true if `a` is greater than `b`.
  * @param {number} a
  * @param {number} b
  * @return {boolean} `a` is larger than `b`
  */
-
+var isGreaterThan = function (a,b) {
+  if (a>b) {
+    return true;
+  } else {
+    return false;
+  }
+};
+isGreaterThan(20,10);
 
 /**
  * Returns true if `a` is less than `b`.
@@ -105,7 +147,14 @@ add(10,20);
  * @param {number} b
  * @return {boolean} `a` is smaller than `b`
  */
-
+var isLessThan = function (a,b) {
+  if (a<b) {
+    return true;
+  } else {
+    return false;
+  }
+};
+isLessThan(20,10);
 
 /**
  * Returns true if `a` and `b` are equal.
@@ -113,7 +162,15 @@ add(10,20);
  * @param {number} b
  * @return {boolean} the numbers are equal
  */
-
+var areEqual = function (a,b) {
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
+};
+areEqual(20,10);
+areEqual(2,2);
 
 /**
  * Returns the smallest value of two numbers.
