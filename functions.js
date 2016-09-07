@@ -241,7 +241,27 @@ isOdd(11);
  * @param {number} total maximum possible score
  * @return {string} the score represented as a letter grade
  */
+var gradeArray = [
+  {minimum: 0, maximum:60, grade: 'F'},
+  {minimum: 60, maximum:70, grade: 'D'},
+  {minimum: 70, maximum:80, grade: 'C'},
+  {minimum: 80, maximum:90, grade: 'B'},
+  {minimum: 90, maximum:100, grade: 'A'},
+];
+var letterGrade = function (score,maxScore) {
+  percentage = (score/maxScore)*100;
+  //console.log(percentage);
+  for (var i = 0; i < gradeArray.length; i++) {
+    if (percentage >= gradeArray[i].minimum && percentage < gradeArray[i].maximum) {
+      letter = gradeArray[i].grade;
+      //console.log(letter);
+    }
+  }
+  return letter;
+};
 
+letterGrade(559,800);
+console.log("559,800 grade is ",letter);
 
 /**
  * Checks if a `restaurant` object has a `reviews` property.
@@ -250,6 +270,24 @@ isOdd(11);
  * @param {object} restaurant   represents a restaurant object
  * @return {object} restaurant
  */
+var incrementReviews = function (restaurant) {
+  if (restaurant.reviews > 0) {
+    ++restaurant.reviews;
+  } else {
+    restaurant.reviews = 1;
+  }
+  return restaurant;
+};
+
+var eatWell = {
+  reviews: 100
+};
+var meatBall = {
+  reviews: 0
+};
+
+incrementReviews(eatWell);
+console.log('eatWell',eatWell);
 
 
 /**
@@ -258,6 +296,12 @@ isOdd(11);
  * @param {string} word2
  * @return {string} joined the words joined with a space
  */
+//var word = '';
+var combine = function (word1,word2) {
+  //word = word1 + ' ' + word2;
+  return word1 + ' ' + word2;
+};
+combine('help','me');
 
 
 /**
@@ -267,4 +311,18 @@ isOdd(11);
  * @param {number} radius
  * @return {object} circle
  */
+
+var circle = {};
+console.log('empty',circle);
+
+var createCircle = function(radius) {
+  circle = {};
+  circle.radius = radius;
+  circle.circumference = 2*radius*Math.PI;
+  circle.area = radius*radius*Math.PI;
+  return circle;
+};
+
+createCircle(10);
+console.log('circle object: ', circle);
 
