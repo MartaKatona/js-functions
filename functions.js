@@ -178,7 +178,14 @@ areEqual(2,2);
  * @param {number} y
  * @return {number} the smallest number
  */
-
+var minimum = function (x,y) {
+  if (x < y) {
+    return x;
+  } else {
+    return y;
+  }
+};
+minimum(20,0);
 
 /**
  * Returns the largest value of two numbers.
@@ -186,21 +193,42 @@ areEqual(2,2);
  * @param {number} y
  * @return {number} the largest number
  */
-
+var maximum = function (x,y) {
+  if (x < y) {
+    return y;
+  } else {
+    return x;
+  }
+};
+maximum(20,0);
 
 /**
  * Returns true if `n` is even.
  * @param {number} n
  * @return {boolean} the number is even
  */
-
+var isEven = function (n) {
+  if (n%2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+isEven(11);
 
 /**
  * Returns true if `n` is odd.
  * @param {number} n
  * @return {boolean} the number is odd
  */
-
+var isOdd = function (n) {
+  if (n%2 !== 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+isOdd(11);
 
 /**
  * Returns a letter grade.
